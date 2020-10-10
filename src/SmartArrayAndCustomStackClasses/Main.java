@@ -35,8 +35,29 @@ public class Main {
 
         System.out.println(chek);
 
+        CustomStack stack = new CustomStack();
 
+        stack.push(45);
+        stack.push(54);
+        stack.push(67);
+        stack.push(89);
+        stack.push(93);
+        stack.push(101);
+
+        stack.forEach(i -> System.out.println(i));
+        System.out.println();
+
+        int temp = stack.peek();
+        System.out.println(temp);
+
+        System.out.println();
+
+        stack.forEach(i -> System.out.println(i));
+        System.out.println();
+        stack.pop();
+
+        System.out.println();
+
+        stack.forEach(i -> System.out.println(i));
     }
-
-
 }

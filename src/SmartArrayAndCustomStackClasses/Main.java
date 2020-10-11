@@ -6,58 +6,35 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        SmartArray list = new SmartArray();
+        LinkedList customList = new LinkedList();
 
-        list.add(2);
-        list.add(10);
-        list.add(34);
-        list.add(71);
-        list.add(1112);
-        list.add(34);
-        list.add(43);
-        list.add(25);
-        list.add(87);
-        list.add(98);
-        list.add(103);
+        customList.forEach(i -> System.out.println(i));
 
-        int current = list.get(3);
+        customList.addFirst(12);
+        customList.addFirst(21);
+        customList.addFirst(43);
+        customList.addFirst(56);
+        customList.addFirst(78);
+        customList.addFirst(112);
 
-        System.out.println(current);
+        customList.addLast(656);
+        customList.addLast(929);
 
-        for (int i = 0; i < 6; i++) {
-            int temp = list.remove(1);
-            System.out.println(temp);
+        int cer = customList.removeLast();
+        System.out.println(cer);
+
+        customList.removeFirst();
+
+
+        int temp = customList.get(3);
+        System.out.println(temp);
+        System.out.println();
+
+        int[] newArr = customList.toArray();
+
+        for (int elem : newArr) {
+            System.out.println(elem);
         }
 
-        list.add(2, 434);
-
-        boolean chek = list.contains(222);
-
-        System.out.println(chek);
-
-        CustomStack stack = new CustomStack();
-
-        stack.push(45);
-        stack.push(54);
-        stack.push(67);
-        stack.push(89);
-        stack.push(93);
-        stack.push(101);
-
-        stack.forEach(i -> System.out.println(i));
-        System.out.println();
-
-        int temp = stack.peek();
-        System.out.println(temp);
-
-        System.out.println();
-
-        stack.forEach(i -> System.out.println(i));
-        System.out.println();
-        stack.pop();
-
-        System.out.println();
-
-        stack.forEach(i -> System.out.println(i));
     }
 }
